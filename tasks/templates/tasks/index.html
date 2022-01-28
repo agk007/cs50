@@ -2,9 +2,12 @@
    
 
 {% block body %}
+<h2>Tasks</h2>
     <ul>
-    {% for task in tasks %}
-        <li>{{ task }}</li>
+        {% for task in tasks %}
+        <li>{{ task }}</li> <!-- if there is no task empt func work-->
+        {% empty%}   
+            <li>no Tasks</li>  
         {% endfor %}
         
     </ul>
